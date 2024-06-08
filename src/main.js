@@ -37,7 +37,6 @@ const selectChangeHandler = newVal => {
     return;
   }
 
-  selectInstance.settings.disabled = true;
   toggleLoader();
   refs.article.classList.add('hidden');
   fetchCatByBreed(catID)
@@ -66,7 +65,6 @@ const selectChangeHandler = newVal => {
       console.error(error);
     })
     .finally(() => {
-      selectInstance.settings.disabled = false;
       toggleLoader();
     });
 };
