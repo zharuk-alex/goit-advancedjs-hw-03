@@ -1,0 +1,31 @@
+.loader-striped {
+  --size: 48px;
+  --color: #fff;
+
+  width: 100%;
+  height: calc(var(--size) / 4);
+  display: inline-block;
+  background-color: var(--color);
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.25) 50%,
+    rgba(0, 0, 0, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  font-size: 30px;
+  background-size: 1em 1em;
+  animation: barStripe 1s linear infinite;
+}
+
+@keyframes barStripe {
+  0% {
+    background-position: 1em 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
